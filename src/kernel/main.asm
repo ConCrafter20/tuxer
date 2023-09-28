@@ -10,6 +10,10 @@ start:
     mov si, msg_hello
     call puts
 
+    ; second hello message
+    mov si, msg_hello2
+    call puts
+
 .halt:
     cli
     hlt
@@ -43,3 +47,4 @@ puts:
     ret
 
 msg_hello: db 'Hello world from KERNEL!', ENDL, 0
+msg_hello2: db 'Hello to tuxer!', ENDL, 0
