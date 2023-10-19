@@ -1,7 +1,7 @@
 BUILD_DIR?=build/
 ASM?=nasm
 
-.PHONY: all clean
+.PHONY: all kernel clean
 
 all: kernel
 

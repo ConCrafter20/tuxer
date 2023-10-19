@@ -7,13 +7,14 @@ global entry
 
 entry:
     cli
+    ; setup stack
     mov ax, ds
     mov ss, ax
     mov sp, 0
     mov bp, sp
     sti
 
-    ; expect boot drive in dl, send it as an argument to cstart function
+    ; expect boot drive in dl, send it as argument to cstart function
     xor dh, dh
     push dx
     call _cstart_
